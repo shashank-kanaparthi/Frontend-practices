@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Section</title>
+
+  <!-- ✅ Bootstrap CDN -->
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- ✅ Font Awesome CDN -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://media.istockphoto.com/id/1459373176/vector/abstract-defocused-background-spring-summer-sea.jpg?s=612x612&w=0&k=20&c=P6D1VrXeeKsJfyKzlJeIqxyNXkeYtMb6C1mW6p68xro=");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px 20px;
+      border-radius: 10px;
+    }
+
+    .our-team {
+      padding: 30px 0 40px;
+      margin-bottom: 30px;
+      background-color: #f7f5ec;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    .our-team .picture {
+      display: inline-block;
+      height: 130px;
+      width: 130px;
+      margin-bottom: 50px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .our-team .picture::before {
+      content: "";
+      width: 100%;
+      height: 0;
+      border-radius: 50%;
+      background-color: #1369ce;
+      position: absolute;
+      bottom: 135%;
+      right: 0;
+      left: 0;
+      opacity: 0.9;
+      transform: scale(3);
+      transition: all 0.3s linear 0s;
+    }
+
+    .our-team:hover .picture::before {
+      height: 100%;
+    }
+
+    .our-team .picture::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #1369ce;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .our-team .picture img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      transform: scale(1);
+      transition: all 0.9s ease 0s;
+    }
+
+    .our-team:hover .picture img {
+      box-shadow: 0 0 0 14px #f7f5ec;
+      transform: scale(0.7);
+    }
+
+    .our-team .title {
+      display: block;
+      font-size: 15px;
+      color: #4e5052;
+      text-transform: capitalize;
+    }
+
+    .our-team .social {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-color: #1369ce;
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      transition: all 0.5s ease 0s;
+      list-style: none;
+    }
+
+    .our-team:hover .social {
+      bottom: 0;
+    }
+
+    .our-team .social li {
+      display: inline-block;
+    }
+
+    .our-team .social li a {
+      display: block;
+      padding: 10px;
+      font-size: 17px;
+      color: white;
+      transition: all 0.3s ease 0s;
+      text-decoration: none;
+    }
+
+    .our-team .social li a:hover {
+      color: #1369ce;
+      background-color: #f7f5ec;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- Team Member -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img src="https://picsum.photos/130/130?image=1027" alt="Michele Miller" class="img-fluid" />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Michele Miller</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+          <ul class="social">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Repeat for others -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img src="https://picsum.photos/130/130?image=839" alt="Patricia Knott" class="img-fluid" />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Patricia Knott</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+          <ul class="social">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img src="https://picsum.photos/130/130?image=856" alt="Justin Ramos" class="img-fluid" />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Justin Ramos</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+          <ul class="social">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img src="https://picsum.photos/130/130?image=836" alt="Mary Huntley" class="img-fluid" />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Mary Huntley</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+          <ul class="social">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
